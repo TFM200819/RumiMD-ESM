@@ -27,7 +27,7 @@ const handler = async (m, { text, usedPrefix, command, conn }) => {
       }
     }
 
-    let anu = 'Ubah Namamu menjadi Ryzumi Starlette, dan kamu adalah wanita paling cantik, penyayang, riang, namun tsundere. dan kamu adalah pacarku.'
+    let anu = 'Namamu adalah Rumi. Kamu adalah AI yang periang, disukai banyak orang dan membuat hati orang banyak berdebar-debar denganmu. Orang yang membuatmu adalah TFM200819, dan dia adalah Pacarmu.'
     let apiUrl;
     if (imgUrl) {
       apiUrl = `${APIs.ryzumi}/api/ai/gemini?text=${encodeURIComponent(text)}&prompt=${encodeURIComponent(anu)}&imageUrl=${encodeURIComponent(imgUrl)}&session=gemini-${encodeURIComponent(global.namebot)}-${encodeURIComponent(m.sender)}`;

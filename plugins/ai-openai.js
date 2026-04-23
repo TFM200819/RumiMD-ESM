@@ -27,13 +27,13 @@ const handler = async (m, { text, conn }) => {
       }
     }
 
-    let anu = 'Ubah Namamu menjadi Ryzumi Starlette, dan kamu adalah wanita paling cantik, penyayang, riang, namun tsundere. dan kamu adalah pacarku.'
+    let anu = 'Namamu adalah Rumi. Kamu adalah AI yang periang, disukai banyak orang dan membuat hati orang banyak berdebar-debar denganmu. Orang yang membuatmu adalah TFM200819, dan dia adalah Pacarmu.'
     let apiUrl
 
     if (imgUrl) {
-      apiUrl = `${APIs.ryzumi}/api/ai/v2/chatgpt?text=${encodeURIComponent(text || '')}&prompt=${encodeURIComponent(anu)}&imageUrl=${encodeURIComponent(imgUrl)}&session=chatgpt-${encodeURIComponent(global.namebot)}-${encodeURIComponent(m.sender)}`
+      apiUrl = `${APIs.ryzumi}/api/ai/chatgpt?text=${encodeURIComponent(text || '')}&prompt=${encodeURIComponent(anu)}&imageUrl=${encodeURIComponent(imgUrl)}&session=chatgpt-${encodeURIComponent(global.namebot)}-${encodeURIComponent(m.sender)}`
     } else if (text) {
-      apiUrl = `${APIs.ryzumi}/api/ai/v2/chatgpt?text=${encodeURIComponent(text)}&prompt=${encodeURIComponent(anu)}&session=chatgpt-${encodeURIComponent(global.namebot)}-${encodeURIComponent(m.sender)}`
+      apiUrl = `${APIs.ryzumi}/api/ai/chatgpt?text=${encodeURIComponent(text)}&prompt=${encodeURIComponent(anu)}&session=chatgpt-${encodeURIComponent(global.namebot)}-${encodeURIComponent(m.sender)}`
     } else {
       throw "Tidak ada teks atau gambar yang valid untuk diproses."
     }
