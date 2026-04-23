@@ -26,7 +26,7 @@ const defaultMenu = {
 • *Mode:* %mode
 • *Prefix:* [ *%_p* ]
 • *Platform:* %platform
-• *Type:* Node.JS
+• *Type:* Node JS
 • *Uptime:* %muptime
 • *Database:* %rtotalreg dari %totalreg
 
@@ -35,9 +35,9 @@ const defaultMenu = {
 │ *Ⓛ* = Limit
 ╰─────────────
   `.trimStart(),
-  header: '╭─────『 %category 』',
-  body: '  ⫸ %cmd %isPremium %islimit',
-  footer: '╰–––––––––––––––༓',
+  header: '┏━━━━━━〔 %category 〕', 
+  body: '  ◈ %cmd %isPremium %islimit',
+  footer: '┗━━━━━━━━━━━━━━━━━', 
   after: ``,
 }
 
@@ -215,7 +215,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
           mediaType: 1,
           previewType: 0,
           renderLargerThumbnail: true,
-          thumbnailUrl: 'https://telegra.ph/file/14a7745f434cd21e900d6.jpg',
+          thumbnailUrl: 'https://tfm200819.s-ul.eu/HAdJ2fvF',
           sourceUrl: sgc,
         }
       }
@@ -249,10 +249,9 @@ function clockString(ms) {
 
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Kok Belum Tidur Kak? 🥱"
-  if (time >= 4) res = "Pagi Kak 🌄"
-  if (time >= 10) res = "Siang Kak ☀️"
-  if (time >= 15) res = "Sore Kak 🌇"
-  if (time >= 18) res = "Malam Kak 🌙"
+  let res = "Belum tidur senpai? 🥱"
+  if (time >= 4) res = "Ohayou 🌄"
+  if (time >= 10) res = "Konnichiwa ☀️"
+  if (time >= 18) res = "Konbanwa 🌙"
   return res
 }

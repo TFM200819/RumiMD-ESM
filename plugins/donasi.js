@@ -1,7 +1,9 @@
+// Bot ini dipakai untuk konsumsi pribadi dengan temanku, jadi kita gk butuh plugin ini.
+
 let handler = async (m) => {
-  let gambar = 'https://api.ryzumi.net/images/qris.png'
+  // let gambar = '/qris.png'
   //let saweria = global.psaweria
-  let qris = global.qris
+  // let qris = global.qris
   let numberowner = global.nomorown
   let anu = `Hai 👋
 Kalian bisa membeli paket premium melalui:
@@ -19,8 +21,8 @@ Terimakasih :D
 Contact Owner:
 wa.me/${numberowner} (Owner)
 `
-  let qris_img = Buffer.from(await (await fetch(gambar)).arrayBuffer())
-  await conn.sendFile(m.chat, qris_img, '', anu, m)
+  // let qris_img = Buffer.from(await (await fetch(gambar)).arrayBuffer())
+  await conn.sendFile(m.chat, '', anu, m)
 }
 
 handler.help = ['premium']
